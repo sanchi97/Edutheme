@@ -1,0 +1,303 @@
+
+   body {
+	padding: 0;
+	margin: 0;
+
+
+}
+
+nav {
+	position:fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 2%;
+	height: 60px;
+    width: 100%;
+	background-color: black;
+}
+nav .logo {
+	float: left;
+	width:40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
+}
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links li a {
+	display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+.main{
+    background:rgba(14, 13, 13, 0.7) url(bg.jpg) ;
+    background-blend-mode:overlay;
+    
+    background-position: center;
+    
+    padding-top: 150px;
+    padding-left: 50px;
+    text-align: justify;
+
+   width: 100%;
+  display: flex;
+
+}
+ .anicontainer{
+     
+     font-size: 20px;
+     margin-bottom: 1%;
+     letter-spacing: 5px;
+     overflow: hidden;
+     animation:content 2s ease-in-out;
+     /* background-image: url(laptop.jpeg); */
+
+}
+@keyframes anicontainer{
+   0%{
+       opacity: 0;
+       transform: translateY(-50%);
+   }
+
+}
+.anicontainer h2{
+   font-size: 15px;
+   margin-bottom: 3%;
+   font-family:Arial;
+   color: black;
+}
+.anicontainer p{
+   font-size:15px;
+   font-weight: 50px;
+   margin-bottom: 3%;
+   font-family: sans-serif;
+   
+}
+
+@media screen and (max-width:1000px) {
+   .anicontainer{
+       width: -100%;
+       text-align: center;
+   }
+   .anicontainer h1{
+       margin-bottom: 5%;
+   }
+   .anicontainer h2{
+       margin-bottom: 5%;
+   }
+   .anicontainer p{
+      margin-bottom: 5%;
+  }
+  
+
+} 
+.job-offers {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+  }
+  .job-offers > h1 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .job-offers > a {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .jobs-section {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10vh;
+  }
+  .job {
+    width: 380px;
+    border-right: 1px solid gray;
+    padding-right: 10px;
+  }
+  .job-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  .job-location {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .job-location > p {
+    margin-left: 5px;
+    color: gray;
+    font-weight: 600;
+  }
+  .job-description > p {
+    color: gray;
+    font-weight: 600;
+  }
+  @media screen and (max-width:1000px) {
+    .anicontainer{
+        width: -100%;
+        text-align: center;
+    }
+}
+#recruiters{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+#recruiters h3{
+    text-align: center;
+    padding-bottom: 40px;
+}
+h3::before{
+    content:'';
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    margin-top: -15px;
+    border-top-right-radius:70px ;
+    border-top-left-radius:90px ;
+
+}
+#recruiters img{
+    max-width: 100px;
+    margin: 10px 20px;
+    
+}
+#card{
+    background-color: transparent;
+    box-shadow: 0 0 0 1px white;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 0;
+    transform: 0.2s all;
+    
+
+}
+#card.a{
+    text-decoration: none;
+}
+#card:hover{
+    z-index: 1;
+    box-shadow: 0 8px 50px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
